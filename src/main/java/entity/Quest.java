@@ -1,9 +1,6 @@
 package entity;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 
 public class Quest {
@@ -19,6 +16,11 @@ public class Quest {
         this.questions = questions;
     }
 
+    public Quest(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     public Quest(Long startQuestionId) {
         this.startQuestionId = startQuestionId;
     }
@@ -29,6 +31,14 @@ public class Quest {
 
     public String getName() {
         return name;
+    }
+
+    public List<Question> getQuestions() {
+        return questions;
+    }
+
+    public Long getStartQuestionId() {
+        return startQuestionId;
     }
 
     @Override
@@ -45,5 +55,15 @@ public class Quest {
     @Override
     public int hashCode() {
         return Objects.hash(id, name, questions, startQuestionId);
+    }
+
+    @Override
+    public String toString() {
+        return "Quest{" +
+                "questId=" + id +
+                ", questName='" + name + '\'' +
+                ", questions=" + questions +
+                ", startQuestionId=" + startQuestionId +
+                '}';
     }
 }

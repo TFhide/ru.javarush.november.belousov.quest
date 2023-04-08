@@ -10,5 +10,6 @@ import java.lang.reflect.Method;
 @Target(ElementType.METHOD)
 public @interface RequestMapping {
     String url();
-    MethodType methodType();
+
+    MethodType method();
 }

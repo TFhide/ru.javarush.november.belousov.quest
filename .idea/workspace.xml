@@ -9,31 +9,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f775d09e-3c33-490c-9fd4-f4124b1718d2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/QuestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/dispatcher/DispatcherServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/dispatcher/MethodType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/dispatcher/RequestMapping.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Answer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Quest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Question.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/InMemoryQuestRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/QuestRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/QuestService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/author.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/mockup.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/pattern.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/people.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/preview.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/style.css" afterDir="false" />
+    <list default="true" id="f775d09e-3c33-490c-9fd4-f4124b1718d2" name="Changes" comment="3.0 ver">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/dispatcher/MethodMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/dispatcher/RegisterForControllers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/injector/ApplicationContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/InMemoryUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/description.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/outcome.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/question.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/test.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/QuestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/QuestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/dispatcher/DispatcherServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/dispatcher/DispatcherServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/dispatcher/RequestMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/dispatcher/RequestMapping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Answer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Answer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Quest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Quest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/InMemoryQuestRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/InMemoryQuestRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/QuestRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/QuestRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/QuestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/QuestService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,10 +47,12 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
         <option value="AnnotationType" />
+        <option value="HTML File" />
+        <option value="Interface" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -74,49 +80,57 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2NPyEniR4iME9NqOhlxFn5KtTVQ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/tffide/Documents/Github projects/FinalProject3Module/Project3Quest/src/main/webapp/img&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/tffide/Documents/Github projects/FinalProject3Module/Project3Quest/src/main/webapp/img",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp/img" />
       <recent name="$PROJECT_DIR$/src/main/webapp/css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp/img" />
       <recent name="$PROJECT_DIR$/src/main/webapp" />
       <recent name="$PROJECT_DIR$/src/main/webapp/css" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/img" />
       <recent name="$PROJECT_DIR$/bootstrap/js" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.70">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Project3Quest" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="index.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/index.jsp">
+      <method v="2" />
     </configuration>
     <configuration name="Tomcat 9.0.70" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.70" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="redeploy-artifacts" />
@@ -207,6 +221,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index.jsp" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -229,8 +244,34 @@
       <workItem from="1679979215524" duration="4960000" />
       <workItem from="1679985638933" duration="5063000" />
       <workItem from="1680008325650" duration="8967000" />
-      <workItem from="1680064625020" duration="13088000" />
+      <workItem from="1680064625020" duration="13755000" />
+      <workItem from="1680104270765" duration="590000" />
+      <workItem from="1680151450747" duration="10876000" />
+      <workItem from="1680180645531" duration="12913000" />
+      <workItem from="1680238235007" duration="11644000" />
+      <workItem from="1680266976118" duration="6055000" />
+      <workItem from="1680339006713" duration="11050000" />
+      <workItem from="1680507433838" duration="9047000" />
+      <workItem from="1680526483905" duration="13515000" />
+      <workItem from="1680584589752" duration="4765000" />
+      <workItem from="1680595980346" duration="612000" />
+      <workItem from="1680617180300" duration="7567000" />
+      <workItem from="1680675456886" duration="10216000" />
+      <workItem from="1680699058279" duration="12168000" />
+      <workItem from="1680760183878" duration="8297000" />
+      <workItem from="1680786312910" duration="12011000" />
+      <workItem from="1680850037616" duration="7856000" />
+      <workItem from="1680871816328" duration="15240000" />
+      <workItem from="1680936794579" duration="292000" />
     </task>
+    <task id="LOCAL-00001" summary="2.0 ver">
+      <created>1680083439729</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1680083439729</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,5 +287,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2.0 ver" />
+    <MESSAGE value="3.0 ver" />
+    <option name="LAST_COMMIT_MESSAGE" value="3.0 ver" />
   </component>
 </project>

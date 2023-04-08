@@ -3,20 +3,45 @@ package entity;
 import java.util.List;
 
 public class Question {
-    private Long id;
-    private String name;
-    private String imageLink;
-    private String outcome;
+    private final Long id;
+    private String text;
+    private String questionImageLink;
     private List<Answer> answers;
 
-    public Question(Long id, String name, String imageLink, List<Answer> answers) {
-        this.id = id;
-        this.name = name;
-        this.imageLink = imageLink;
+    public Long getId() {
+        return id;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public String getQuestionImageLink() {
+        return questionImageLink;
+    }
+
+
+    public List<Answer> getAnswers() {
+        return answers;
+    }
+
+    public Question(Long questionId, String questionName, String questionImageLink, List<Answer> answers) {
+        this.id = questionId;
+        this.text = questionName;
+        this.questionImageLink = questionImageLink;
         this.answers = answers;
     }
-    public Question(Long id, String outcome) {
-        this.id = id;
-        this.outcome = outcome;
+    public Question(Long questionId) {
+        this.id = questionId;
+    }
+
+    @Override
+    public String toString() {
+        return "Question{" +
+                "id=" + id +
+                ", text='" + text + '\'' +
+                ", questionImageLink='" + questionImageLink + '\'' +
+                ", answers=" + answers +
+                '}';
     }
 }

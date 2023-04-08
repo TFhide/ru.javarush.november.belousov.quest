@@ -8,119 +8,95 @@ import java.util.*;
 
 public class InMemoryQuestRepository implements QuestRepository {
 
-    private static final List<List<Quest>> quests = new ArrayList<>();
-    private static final Map<Quest, Quest> ID_TO_QUEST = new HashMap<Quest, Quest>();
+    private static final List<String> descriptionQuest;
 
-    static
-    {
-        quests = Collections.singletonList(new Quest(1L, "Потерянный артефакт темных времен", Arrays.asList(
-                new Question(1L, "Ты готов отправиться в путешествие вместе с принцем Персии на поиски затерянной цитадели?",
-                        "img/PrinceOfPersia/first_scene.png", Arrays.asList(new Answer(1L, "Да, я готов(а) к приключению!", 2L),
-                        new Answer(2L, "Нет, я боюсь рисковать своей жизнью.", 3L))),
-                new Question(2L, "Ты и принц Персии оказались в засаде. Как поступишь?", "img/PrinceOfPersia/second_scene.png",
-                        Arrays.asList(new Answer(1L, "Попытаюсь отбиться от врагов.", 4L), new Answer(2L,
-                                "Попытаюсь скрыться и обойти врагов.", 5L))),
-                new Question(3L, "Ты подвел принца Персии, он расчитывал на твою помощь. Поражение!"),
-                new Question(4L, "Вы встретили загадочного старца, который предлагает помочь вам найти цитадель. Как поступишь?",
-                        "img/PrinceOfPersia/second_scene.png", Arrays.asList(new Answer(1L, "Приму помощь старца.", 6L),
-                        new Answer(2L, "Откажусь от помощи и продолжу искать цитадель самостоятельно.", 7L))),
-                new Question(5L, "Из-за ошибочного решения скрыться и обойти врагов," +
-                        " оставив принца Персии и его воинов сражаться с врагом лицом к лицу, погибли все, включая принца Персии. Поражение!"),
-                new Question(6L, "Вы прибыли к старинному храму, который, как вы думаете, может быть ключом к нахождению цитадели. " +
-                        "Что будешь делать?", "img/PrinceOfPersia/second_scene.png",
-                        Arrays.asList(new Answer(1L, "Исследовать храм, чтобы найти нужную информацию.", 8L),
-                                new Answer(2L, "Пройти мимо храма и продолжить поиски цитадели.", 9L))),
-                new Question(7L,
-                        "Отказавшись от помощи старца, потеряна ценная информацию о местонахождении цитадели, войско заблудилось и погибло. Поражение!"),
-                new Question(8L, "Вы нашли затерянную цитадель, но она охраняется стражами. Как действуешь?",
-                        "img/PrinceOfPersia/second_scene.png", Arrays.asList(new Answer(1L, "Начну сражение со стражами.", 10L),
-                        new Answer(2L, "Попробую обойти стражей и незаметно проникнуть внутрь цитадели.", 11L))),
-                new Question(9L, "Упущена возможность найти ключ к нахождению цитадели. Поражение!"),
-                new Question(10L,
-                        "Умение действовать не только силой, но и сообразительностью, могло бы помочь достичь цели," +
-                                " а не привести к погибели."),
-                new Question(11L, "Попробовав незаметно проникнуть внутрь цитадели при помощи смекалки," +
-                        " герой вместе с принцем Персии и его войском смогли победить стражений и разгадать тайну затерянной цитадели. Победа!"
-                ))),
-                new Quest(2L, "Побег из запертой комнаты", new Quest(1L,"still in work", Arrays.asList(
-                        new Question(1L, "not ready",
-                                "not ready", Arrays.asList(new Answer(1L, "not ready", 1L),
-                                new Answer(2L, "Нет, я боюсь рисковать своей жизнью.", 1L))),
-                        new Quest(3L, "Путешествие принца Персии: Легенда о затерянной цитадели",
-                                new Quest(1L,"still in work", Arrays.asList(
-                                        new Question(1L, "not ready",
-                                                "not ready", Arrays.asList(new Answer(1L, "not ready", 1L),
-                                                new Answer(2L, "Нет, я боюсь рисковать своей жизнью.", 1L)))),
-                                        new Quest(4L, "Исследование заброшенного замка",
-                                                new Quest(1L,"still in work", Arrays.asList(
-                                                        new Question(1L, "not ready",
-                                                                "not ready", Arrays.asList(new Answer(1L, "not ready", 1L),
-                                                                new Answer(2L, "Нет, я боюсь рисковать своей жизнью.", 1L)))),
-                                                        new Quest(5L, "Охота на сокровища пиратов",
-                                                                new Quest(1L,"still in work", Arrays.asList(
-                                                                        new Question(1L, "not ready",
-                                                                                "not ready", Arrays.asList(new Answer(1L, "not ready", 1L),
-                                                                                new Answer(2L, "Нет, я боюсь рисковать своей жизнью.", 1L)));
+    private static final List<Quest> quests;
+    private static final Map<Long, Quest> ID_TO_QUEST = new HashMap<>();
 
 
 
-//still in work
+    static {
+        descriptionQuest = Arrays.asList(new String("Добро пожаловать в захватывающий мир фантастических приключений и опасных испытаний! " +
+                "Вы готовы отправиться вместе с принцем Персии на поиски затерянной цитадели? Этот квест полон увлекательных загадок," +
+                " незабываемых встреч и сражений с опасными противниками. Вас ждет захватывающее приключение, полное экшена и неожиданных поворотов сюжета." +
+                " Сможете ли вы пройти все испытания, чтобы найти затерянную цитадель и разгадать ее тайны? Предстоит много опасных решений и рискованных действий," +
+                " но награда стоит того - несметные богатства и бесценные знания ждут того, кто сможет достичь цели. Приготовьтесь к захватывающему приключению," +
+                " которое оставит незабываемые впечатления на всю жизнь!"),
+                new String("В далекие времена правительство страны переживало трудные времена. Империя была раздроблена, " +
+                        "властью завладели коррумпированные чиновники, а народ страдал от бедности и безработицы. " +
+                        "В такое время на свет появилась легенда о затерянной цитадели, которая хранила в себе несметные богатства и " +
+                        "могла принести счастье и процветание всей стране. Но никто не мог найти ее местонахождение.\n" +
+                "Однажды принц Персии решил отправиться на поиски цитадели, чтобы вернуть своей стране благоденствие и порядок. " +
+                        "Он нашел смельчака, готового присоединиться к нему в этом опасном приключении. Вместе они прошли через тысячи опасностей," +
+                        " сражались со злыми врагами и обходили смертельные ловушки. Они встретили загадочного старца, который помог им в поисках," +
+                        " и нашли старинный храм, в котором была скрыта важная информация.\n" +
+                "Наконец, они нашли затерянную цитадель, которую охраняли многочисленные стражи. В сражении со стражами герои потеряли" +
+                        " большую часть своих войск, но смогли захватить цитадель и принести своей стране мир и процветание.\n" +
+                "И с тех пор легенда о принце Персии и его отважном спутнике живет в сердцах народа, напоминая о том, что все препятствия можно преодолеть," +
+                        " если верить в свои силы и бороться за благо других.\n"));
 
 
+        quests = Arrays.asList(new Quest(1L, "Путешествие принца Персии: Легенда о затерянной цитадели", Arrays.asList(
+                        new Question(1L, "Ты готов отправиться в путешествие вместе с принцем Персии на поиски затерянной цитадели?",
+                                "img/PrinceOfPersia/first_scene.png", Arrays.asList(new Answer(1L, "Да, я готов(а) к приключению!", 2L),
+                                new Answer(2L, "Нет, я боюсь рисковать своей жизнью.",
+                                        "Ты подвел принца Персии, он расчитывал на твою помощь. Поражение!"))),
+                        new Question(2L, "Ты и принц Персии оказались в засаде. Как поступишь?", "img/PrinceOfPersia/second_scene.png",
+                                Arrays.asList(new Answer(1L, "Попытаюсь отбиться от врагов.", 3L), new Answer(2L,
+                                        "Попытаюсь скрыться и обойти врагов.", "Из-за ошибочного решения скрыться и обойти врагов," +
+                                        " оставив принца Персии и его воинов сражаться с врагом лицом к лицу, погибли все, включая принца Персии. Поражение!"))),
+                        new Question(3L, "Вы встретили загадочного старца, который предлагает помочь вам найти цитадель. Как поступишь?",
+                                "img/PrinceOfPersia/second_scene.png", Arrays.asList(new Answer(1L, "Приму помощь старца.", 5L),
+                                new Answer(2L, "Откажусь от помощи и продолжу искать цитадель самостоятельно.", "Отказавшись от помощи" +
+                                        " старца, потеряна ценная информацию о местонахождении цитадели, войско заблудилось и погибло. Поражение!"))),
 
+                        new Question(5L, "Вы прибыли к старинному храму, который, как вы думаете, может быть ключом к нахождению цитадели. " +
+                                "Что будешь делать?", "img/PrinceOfPersia/second_scene.png",
+                                Arrays.asList(new Answer(1L, "Исследовать храм, чтобы найти нужную информацию.", 7L),
+                                        new Answer(2L, "Пройти мимо храма и продолжить поиски цитадели.",
+                                                "Упущена возможность найти ключ к нахождению цитадели. Поражение!"))),
+                        new Question(7L, "Вы нашли затерянную цитадель, но она охраняется стражами. Как действуешь?",
+                                "img/PrinceOfPersia/second_scene.png", Arrays.asList(new Answer(1L, "Начну сражение со стражами.",
+                                        "Умение действовать не только силой, но и сообразительностью, могло бы помочь достичь цели, а не привести к погибели."),
+                                new Answer(2L, "Попробую обойти стражей и незаметно проникнуть внутрь цитадели.",
+                                        "Попробовав незаметно проникнуть внутрь цитадели при помощи смекалки, герой вместе с принцем Персии и его войском смогли" +
+                                                " победить стражений и разгадать тайну затерянной цитадели. Победа!"))))),
+                new Quest(2L, "Побег из запертой комнаты", Arrays.asList(new Question(1L, "not ready",
+                        "not ready", Arrays.asList(new Answer(1L, "not ready", 1L),
+                        new Answer(2L, "not ready", 1L))))),
+                new Quest(3L, "Потерянный артефакт темных времен", Arrays.asList(new Question(1L, "not ready",
+                        "not ready", Arrays.asList(new Answer(1L, "not ready", 1L),
+                        new Answer(2L, "not ready", 1L))))),
+                new Quest(4L, "Исследование заброшенного замка", Arrays.asList(new Question(1L, "not ready",
+                        "not ready", Arrays.asList(new Answer(1L, "not ready", 1L),
+                        new Answer(2L, "not ready", 1L))))),
+                new Quest(5L, "Охота на сокровища пиратов", Arrays.asList(new Question(1L, "not ready",
+                        "not ready", Arrays.asList(new Answer(1L, "not ready", 1L),
+                        new Answer(2L, "not ready", 1L))))));
 
+        for (int i = 0; i < quests.size(); i++) {
+            ID_TO_QUEST.put(quests.get(i).getId(), quests.get(i));
+        }
 
-
-                new Quest(2L, "Побег из запертой комнаты"),
-                new Quest(3L, "Путешествие принца Персии: Легенда о затерянной цитадели"),
-                new Quest(4L, "Исследование заброшенного замка"),
-                new Quest(5L, "Охота на сокровища пиратов"));
-    }
-
-    {
-//     ID_TO_QUEST.put(quests.get(3), new Quest(Collections.singletonList(new Question(1L,
-//             "Ты готов отправиться в путешествие вместе с принцем Персии на поиски затерянной цитадели?",
-//             "img/PrinceOfPersia/first_scene.png", Arrays.asList(new Answer(1L, "Да, я готов(а) к приключению!", 2L),
-//             new Answer(2L, "Нет, я боюсь рисковать своей жизнью.", 3L))))));
-//     ID_TO_QUEST.put(quests.get(3), new Quest(Collections.singletonList(new Question(2L, "Ты и принц Персии оказались в засаде. Как поступишь?",
-//             "img/PrinceOfPersia/second_scene.png", Arrays.asList(new Answer(1L, "Попытаюсь отбиться от врагов.", 4L),
-//             new Answer(2L, "Попытаюсь скрыться и обойти врагов.", 5L))))));
-//     ID_TO_QUEST.put(quests.get(3), new Quest(new Question(3L, "Ты подвел принца Персии, он расчитывал на твою помощь. Поражение!")));
-//     ID_TO_QUEST.put(quests.get(3), new Quest(Collections.singletonList(new Question(4L,
-//             "Вы встретили загадочного старца, который предлагает помочь вам найти цитадель. Как поступишь?",
-//                "img/PrinceOfPersia/second_scene.png", Arrays.asList(new Answer(1L, "Приму помощь старца.", 6L),
-//                new Answer(2L, "Откажусь от помощи и продолжу искать цитадель самостоятельно.", 7L))))));
-//     ID_TO_QUEST.put(quests.get(3), new Quest(new Question(5L, "Из-за ошибочного решения скрыться и обойти врагов," +
-//                " оставив принца Персии и его воинов сражаться с врагом лицом к лицу, погибли все, включая принца Персии. Поражение!")));
-//     ID_TO_QUEST.put(quests.get(3), new Quest(Collections.singletonList(new Question(6L,
-//             "Вы прибыли к старинному храму, который, как вы думаете, может быть ключом к нахождению цитадели. Что будешь делать?",
-//                "img/PrinceOfPersia/second_scene.png", Arrays.asList(new Answer(1L, "Исследовать храм, чтобы найти нужную информацию.", 8L),
-//                new Answer(2L, "Пройти мимо храма и продолжить поиски цитадели.", 9L))))));
-//     ID_TO_QUEST.put(quests.get(3), new Quest(new Question(7L,
-//                "Отказавшись от помощи старца, потеряна ценная информацию о местонахождении цитадели, войско заблудилось и погибло. Поражение!")));
-//     ID_TO_QUEST.put(quests.get(3), new Quest(Collections.singletonList(new Question(8L, "Вы нашли затерянную цитадель, но она охраняется стражами. Как действуешь?",
-//                "img/PrinceOfPersia/second_scene.png", Arrays.asList(new Answer(1L, "Начну сражение со стражами.", 10L),
-//                new Answer(2L, "Попробую обойти стражей и незаметно проникнуть внутрь цитадели.", 11L))))));
-//        ID_TO_QUEST.put(quests.get(3), new Quest(new Question(9L, "Упущена возможность найти ключ к нахождению цитадели. Поражение!")));
-//        ID_TO_QUEST.put(quests.get(3), new Quest(new Question(10L,
-//                "Умение действовать не только силой, но и сообразительностью, могло бы помочь достичь цели, а не привести к погибели.")));
-        ID_TO_QUEST.put(quests.get(3), new Quest(new Question(11L, "Попробовав незаметно проникнуть внутрь цитадели при помощи смекалки," +
-                " герой вместе с принцем Персии и его войском смогли победить стражений и разгадать тайну затерянной цитадели. Победа!")));
     }
 
     @Override
-    public List<Quest> findAllQuests()
-    {
-        return new ArrayList<>(quests);
+    public List<Quest> findAllQuests() {
+        return quests;
     }
 
     @Override
     public Optional<Quest> getQuestById(Long id) {
-        String result = "";
-        for (Map.Entry<Quest, Quest> entry : ID_TO_QUEST.entrySet()) {
-            if(entry.getKey().getId().equals(id))
-            result = entry.getKey().getName();
+        Quest result = null;
+        for (Map.Entry<Long, Quest> entry : ID_TO_QUEST.entrySet()) {
+            if (Objects.equals(entry.getKey(), id))
+                result = entry.getValue();
         }
-        return Optional.ofNullable(ID_TO_QUEST.get(result));
+        return Optional.ofNullable(result);
+    }
+
+    @Override
+    public List<String> getDescriptionQuest() {
+        return descriptionQuest;
     }
 }

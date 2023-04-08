@@ -8,4 +8,6 @@ import java.util.Optional;
 public interface QuestRepository {
      List<Quest> findAllQuests();
      Optional<Quest> getQuestById(Long id);
+
+     List<String> getDescriptionQuest();
 }
