@@ -53,15 +53,22 @@ public class QuestController {
     @RequestMapping(url = "/general", method = MethodType.POST)
     public void showQuestion(HttpServletRequest request, HttpServletResponse response)
     {
+        String quest = request.getParameter("quest");
+        String question1 = request.getParameter("question");
         Question question = serviceQuest.getQuestion(Long.parseLong(request.getParameter("quest")),
                 Long.parseLong(request.getParameter("question")));
         List<Answer> answers = serviceQuest.getAnswers(Long.parseLong(request.getParameter("quest")),
                 Long.parseLong(request.getParameter("question")));
-        request.setAttribute("question", question);
-        request.setAttribute("answers", answers);
+
+        String output = "<h2>" + question.getText() + "</h2>"
+                + "<p><input type='radio' name='answer' value='1'> " + answers.get(0).getText() + "</p>"
+                + "<p><input type='radio' name='answer' value='2'> " + answers.get(1).getText() + "</p>";
+
+        response.setContentType("text/html");
+        response.setCharacterEncoding("UTF-8");
         try {
-            request.getRequestDispatcher("/question.jsp").forward(request, response);
-        } catch (ServletException | IOException e) {
+            response.getWriter().write(output);
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
