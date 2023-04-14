@@ -3,11 +3,16 @@ package repository;
 import entity.Quest;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 public interface QuestRepository {
      List<Quest> findAllQuests();
      Optional<Quest> getQuestById(Long id);
 
-     List<String> getDescriptionQuest();
+     Map<String, Map<String,String>> getDescriptionQuest();
+
+     Long getQuestionId(String questionText);
+
+
 }

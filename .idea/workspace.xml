@@ -9,11 +9,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f775d09e-3c33-490c-9fd4-f4124b1718d2" name="Changes" comment="4.0 ver">
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
+    <list default="true" id="f775d09e-3c33-490c-9fd4-f4124b1718d2" name="Changes" comment="3.0 ver">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/que.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/QuestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/QuestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/InMemoryQuestRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/InMemoryQuestRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/InMemoryUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/InMemoryUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/QuestRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/QuestRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/QuestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/QuestService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/description.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/description.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/PrinceOfPersia/FinalScene.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/PrinceOfPersia/firstQuestion.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/PrinceOfPersia/first_scene.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/img/PrinceOfPersia/first_scene.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/PrinceOfPersia/vvgunko_The_Prince_of_Persia_and_his_warriors_arrived_at_the_an_02f41340-ca57-4f94-86c2-17ac6b798738.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/PrinceOfPersia/vvgunko_The_Prince_of_Persia_and_his_warriors_arrived_at_the_an_148bc2a2-55d4-472c-989e-9bdfd6d1dcd0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/PrinceOfPersia/vvgunko_The_Prince_of_Persia_and_his_warriors_arrived_at_the_an_cad37c60-3963-4449-9ef1-44e6261f4e5a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/PrinceOfPersia/vvgunko_The_Prince_of_Persia_and_his_warriors_have_met_a_myster_844ae754-8e29-42c1-a127-8e31653e2559.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/PrinceOfPersia/vvgunko_The_prince_of_Persia_and_his_warriors_were_ambushed_1074784d-3278-4708-a5c8-b678692756f9.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/outcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/outcome.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/question.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/question.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +48,9 @@
         <option value="Enum" />
         <option value="AnnotationType" />
         <option value="HTML File" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
+        <option value="JavaScript File" />
         <option value="Jsp File" />
       </list>
     </option>
@@ -48,6 +71,13 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -101,7 +131,7 @@
     <configuration name="index.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/index.jsp">
       <method v="2" />
     </configuration>
-    <configuration name="Tomcat 9.0.70" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.73" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 9.0.70" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.70" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
         <artifact name="Project3Quest:war">
@@ -232,7 +262,12 @@
       <workItem from="1680850037616" duration="7856000" />
       <workItem from="1680871816328" duration="15240000" />
       <workItem from="1680936794579" duration="292000" />
-      <workItem from="1680937292297" duration="12155000" />
+      <workItem from="1681188527161" duration="24937000" />
+      <workItem from="1681293148231" duration="15113000" />
+      <workItem from="1681364392823" duration="11123000" />
+      <workItem from="1681383375144" duration="3114000" />
+      <workItem from="1681452312421" duration="12728000" />
+      <workItem from="1681483938185" duration="6362000" />
     </task>
     <task id="LOCAL-00001" summary="2.0 ver">
       <created>1680083439729</created>
@@ -261,7 +296,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2.0 ver" />
     <MESSAGE value="3.0 ver" />
-    <MESSAGE value="4.0 ver" />
-    <option name="LAST_COMMIT_MESSAGE" value="4.0 ver" />
+    <option name="LAST_COMMIT_MESSAGE" value="3.0 ver" />
   </component>
 </project>

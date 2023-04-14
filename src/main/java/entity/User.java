@@ -3,20 +3,20 @@ package entity;
 import java.util.Objects;
 
 public class User {
-    private final Long id;
+    private final Integer ipAddress;
     private Integer win;
     private Integer lose;
     private Integer quantity;
 
-    public User(Long id) {
-        this.id = id;
+    public User(Integer ipAddress) {
+        this.ipAddress = ipAddress;
         this.win = 0;
         this.lose = 0;
         this.quantity = 0;
     }
 
-    public Long getId() {
-        return id;
+    public Integer getIpAddress() {
+        return ipAddress;
     }
 
 
@@ -52,7 +52,7 @@ public class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return Objects.equals(id, user.id)
+        return Objects.equals(ipAddress, user.ipAddress)
                 && Objects.equals(win, user.win)
                 && Objects.equals(lose, user.lose)
                 && Objects.equals(quantity, user.quantity);
@@ -60,13 +60,13 @@ public class User {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, win, lose, quantity);
+        return Objects.hash(ipAddress, win, lose, quantity);
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
+                "id=" + ipAddress +
                 ", win=" + win +
                 ", lose=" + lose +
                 ", quantity=" + quantity +

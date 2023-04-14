@@ -10,20 +10,20 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public void addUser(Long id) {
-        userRepository.addUser(id);
+    public void addUser(Integer ipAddress) {
+        userRepository.addUser(ipAddress);
     }
 
-    public void saveActionUser(Long id) {
-        userRepository.saveActionUser(id);
+    public void saveActionUser(Integer ipAddress) {
+        userRepository.saveActionUser(ipAddress);
     }
 
-    public void saveOfWin(Long id) {
-        userRepository.saveOfWin(id);
+    public void saveOfWin(Integer ipAddress) {
+        userRepository.saveOfWin(ipAddress);
     }
 
-    public void saveOfLose(Long id) {
-        userRepository.saveOfLose(id);
+    public void saveOfLose(Integer ipAddress) {
+        userRepository.saveOfLose(ipAddress);
     }
 
 }

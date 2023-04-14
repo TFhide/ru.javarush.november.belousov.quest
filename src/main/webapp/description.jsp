@@ -21,18 +21,18 @@
 </head>
 <body>
 
-<header style="padding: 100px">
-    <div class="container">
-        <div class="row">
-            <div class="col-12"></div>
-            <div class="center-text">
-            <h1 style="color: #664d03">Путешествие принца Персии: Легенда о затерянной цитадели</h1>
-            </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
+<%--<header style="padding: 100px">--%>
+<%--    <div class="container">--%>
+<%--        <div class="row">--%>
+<%--            <div class="col-12"></div>--%>
+<%--            <div class="center-text">--%>
+<%--            <h1 style="color: #664d03">Путешествие принца Персии: Легенда о затерянной цитадели</h1>--%>
+<%--            </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--        </div>--%>
+<%--    </div>--%>
+<%--</header>--%>
 
 <section class="text-center">
     <div class="about">
@@ -42,24 +42,25 @@
 <%--                <div class="center-text">--%>
 <%--                </div>--%>
 <%--            </div>--%>
-    <div class="row">
-        <div class="center-text">
-            <img src="<%= request.getContextPath() %>/img/PrinceOfPersia/first_scene.png" alt="first_scene"
-                 style="width: 300px; height: 200px; margin: 0 auto">
+    <div id="descriptionQuest">
+        <div class="row">
+                <div id="descriptionImage" style="text-align: center;"><img src="" alt="" width="400" height="300"></div>
         </div>
-    </div>
             <div class="row">
-                <div class="center-text">
-                <c:out value="${descriptionQuest}"/>
-                    <a href="dispatcher/homePage?toReturn=1" class="answer-link">Главная страница</a>
+                <div class="center-text" id="description">
+<%--                <c:out value="${descriptionQuest}"/>--%>
                 </div>
             </div>
-        </div>
     </div>
+    <div class="row">
+        <a href="/" class="start-link">Главная страница</a>
+    </div>
+        </div>
+        </div>
 </section>
 
 <footer
-        id="footer" style="padding: 50px">
+        id="footer" style="padding: 30px">
 </footer>
 <script src="js/bootstrap.bundle.min.js"></script>
 
