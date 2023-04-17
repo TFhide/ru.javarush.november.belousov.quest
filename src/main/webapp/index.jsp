@@ -47,7 +47,7 @@
                 <p><a href="#" class="section-link"><span class="quests-icon icon-paper-plane"></span>Запуск квеста</a></p>
             </div>
             <div class="row">
-                <p><a href="#" class="section-link"><span class="quests-icon icon-chart-bar"></span>Статистика</a></p>
+                <p><a href="#" class="statistic-link"><span class="quests-icon icon-chart-bar"></span>Статистика</a></p>
             </div>
         </div>
     </div>

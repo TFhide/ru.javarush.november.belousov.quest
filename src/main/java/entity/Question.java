@@ -8,6 +8,13 @@ public class Question {
     private String questionImageLink;
     private List<Answer> answers;
 
+    public Question(Long questionId, String questionName, String questionImageLink, List<Answer> answers) {
+        this.id = questionId;
+        this.text = questionName;
+        this.questionImageLink = questionImageLink;
+        this.answers = answers;
+    }
+
     public Long getId() {
         return id;
     }
@@ -23,16 +30,6 @@ public class Question {
 
     public List<Answer> getAnswers() {
         return answers;
-    }
-
-    public Question(Long questionId, String questionName, String questionImageLink, List<Answer> answers) {
-        this.id = questionId;
-        this.text = questionName;
-        this.questionImageLink = questionImageLink;
-        this.answers = answers;
-    }
-    public Question(Long questionId) {
-        this.id = questionId;
     }
 
     @Override

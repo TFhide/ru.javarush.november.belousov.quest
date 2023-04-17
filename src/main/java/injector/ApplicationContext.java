@@ -1,8 +1,7 @@
 package injector;
 
 import controller.QuestController;
-import controller.dispatcher.MethodMap;
-import controller.dispatcher.MethodType;
+import controller.dispatcher.HandlerMethod;
 import controller.dispatcher.RegisterForControllers;
 import repository.InMemoryQuestRepository;
 import repository.InMemoryUserRepository;
@@ -24,5 +23,5 @@ public class ApplicationContext {
     private static final UserService USER_SERVICE = new UserService(USER_REPOSITORY);
     private static final QuestController QUEST_CONTROLLER = new QuestController(QUEST_SERVICE, USER_SERVICE);
 
-    public static final Map<String, MethodMap> URL_TO_METHODMAP = new RegisterForControllers().register(QUEST_CONTROLLER);
+    public static final Map<String, HandlerMethod> URL_TO_HANDLER = new RegisterForControllers().register(QUEST_CONTROLLER);
 }

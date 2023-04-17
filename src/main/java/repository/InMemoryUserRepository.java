@@ -2,18 +2,25 @@ package repository;
 
 import entity.User;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class InMemoryUserRepository implements UserRepository {
     private List<User> users;
 
+    {
+        users = new ArrayList<>();
+    }
+
     @Override
-    public void addUser(String ipAddress) {
+    public void addUser(String ipAddress)
+    {
            users.add(new User(ipAddress));
     }
 
     @Override
-    public void saveActionUser(String ipAddress) {
+    public void saveActionUser(String ipAddress)
+    {
         for (User user : users) {
             if (user.getIpAddress().equals(ipAddress))
                 user.setQuantity(user.getQuantity() + 1);
@@ -21,7 +28,8 @@ public class InMemoryUserRepository implements UserRepository {
     }
 
     @Override
-    public void saveOfWin(String ipAddress) {
+    public void saveOfWin(String ipAddress)
+    {
         for (User user : users) {
             if (user.getIpAddress().equals(ipAddress))
                 user.setWin(user.getWin() + 1);
@@ -29,7 +37,8 @@ public class InMemoryUserRepository implements UserRepository {
     }
 
     @Override
-    public void saveOfLose(String ipAddress) {
+    public void saveOfLose(String ipAddress)
+    {
         for (User user : users) {
             if (user.getIpAddress().equals(ipAddress))
                 user.setLose(user.getLose() + 1);
@@ -38,10 +47,22 @@ public class InMemoryUserRepository implements UserRepository {
 
     @Override
     public boolean isUserInMemory(String ipAddress) {
-        for (User user : users) {
-            if(user.getIpAddress().equals(ipAddress))
+        if (!users.isEmpty()) {
+            for (User user : users) {
+                if (user.getIpAddress().equals(ipAddress))
                 return true;
+            }
         }
         return false;
+    }
+
+    @Override
+    public User getUser(String ipAddress)
+    {
+        for (User user : users) {
+            if (user.getIpAddress().equals(ipAddress))
+                return user;
+        }
+        return null;  // обработать
     }
 }

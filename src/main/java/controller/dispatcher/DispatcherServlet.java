@@ -5,12 +5,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-import static injector.ApplicationContext.URL_TO_METHODMAP;
+import static injector.ApplicationContext.URL_TO_HANDLER;
 
 @WebServlet("/dispatcher/*")
 public class DispatcherServlet extends HttpServlet {
@@ -33,11 +32,11 @@ public class DispatcherServlet extends HttpServlet {
         String uri = req.getRequestURI();
 
         String url = uri.replace(req.getContextPath(), "").replace(req.getServletPath(), "");
-        MethodMap methodMap = URL_TO_METHODMAP.get(url);
+        HandlerMethod handler = URL_TO_HANDLER.get(url);
 
-        Method method = methodMap.getMethod();
-        Object controller = methodMap.getControllerInstance();
-        MethodType methodType = methodMap.getMethodType();
+        Method method = handler.getMethod();
+        Object controller = handler.getControllerInstance();
+        MethodType methodType = handler.getMethodType();
 
         if (httpMethod.equalsIgnoreCase(methodType.name())) {
             try {

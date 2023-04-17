@@ -77,10 +77,6 @@ public class InMemoryQuestRepository implements QuestRepository {
 
     }
 
-    @Override
-    public List<Quest> findAllQuests() {
-        return quests;
-    }
 
     @Override
     public Optional<Quest> getQuestById(Long id) {

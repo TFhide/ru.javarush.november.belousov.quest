@@ -3,12 +3,12 @@ package controller.dispatcher;
 import java.lang.reflect.Method;
 import java.util.Objects;
 
-    public class MethodMap {
+    public class HandlerMethod {
         private final Object controllerInstance;
         private final MethodType methodType;
         private final Method method;
 
-        public MethodMap(Object controllerInstance, MethodType methodType, Method method) {
+        public HandlerMethod(Object controllerInstance, MethodType methodType, Method method) {
             this.controllerInstance = controllerInstance;
             this.methodType = methodType;
             this.method = method;
@@ -34,7 +34,7 @@ import java.util.Objects;
             if (o == null || getClass() != o.getClass()) {
                 return false;
             }
-            MethodMap methodMap = (MethodMap) o;
+            HandlerMethod methodMap = (HandlerMethod) o;
             return Objects.equals(controllerInstance, methodMap.controllerInstance) &&
                     methodType == methodMap.methodType &&
                     Objects.equals(method, methodMap.method);
