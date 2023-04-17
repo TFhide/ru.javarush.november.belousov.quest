@@ -2,9 +2,10 @@ package repository;
 
 public interface UserRepository {
 
-    void addUser(Integer ipAddress);
-    void saveActionUser(Integer ipAddress);
-    void saveOfWin(Integer ipAddress);
-    void saveOfLose(Integer ipAddress);
+    boolean isUserInMemory(String ipAddress);
+    void addUser(String ipAddress);
+    void saveActionUser(String ipAddress);
+    void saveOfWin(String ipAddress);
+    void saveOfLose(String ipAddress);
 
 }

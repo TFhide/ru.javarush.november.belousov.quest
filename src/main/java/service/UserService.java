@@ -10,20 +10,22 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public void addUser(Integer ipAddress) {
+    public void addUser(String ipAddress) {
         userRepository.addUser(ipAddress);
     }
 
-    public void saveActionUser(Integer ipAddress) {
+    public void saveActionUser(String ipAddress) {
         userRepository.saveActionUser(ipAddress);
     }
 
-    public void saveOfWin(Integer ipAddress) {
+    public void saveOfWin(String ipAddress) {
         userRepository.saveOfWin(ipAddress);
     }
 
-    public void saveOfLose(Integer ipAddress) {
+    public void saveOfLose(String ipAddress) {
         userRepository.saveOfLose(ipAddress);
     }
+
+    public boolean isUserInMemory(String ipAddress) { return userRepository.isUserInMemory(ipAddress); }
 
 }

@@ -8,31 +8,40 @@ public class InMemoryUserRepository implements UserRepository {
     private List<User> users;
 
     @Override
-    public void addUser(Integer ipAddress) {
+    public void addUser(String ipAddress) {
            users.add(new User(ipAddress));
     }
 
     @Override
-    public void saveActionUser(Integer ipAddress) {
+    public void saveActionUser(String ipAddress) {
         for (User user : users) {
-            if (user.getIpAddress() == ipAddress)
+            if (user.getIpAddress().equals(ipAddress))
                 user.setQuantity(user.getQuantity() + 1);
         }
     }
 
     @Override
-    public void saveOfWin(Integer ipAddress) {
+    public void saveOfWin(String ipAddress) {
         for (User user : users) {
-            if (user.getIpAddress() == ipAddress)
+            if (user.getIpAddress().equals(ipAddress))
                 user.setWin(user.getWin() + 1);
         }
     }
 
     @Override
-    public void saveOfLose(Integer ipAddress) {
+    public void saveOfLose(String ipAddress) {
         for (User user : users) {
-            if (user.getIpAddress() == ipAddress)
+            if (user.getIpAddress().equals(ipAddress))
                 user.setLose(user.getLose() + 1);
         }
+    }
+
+    @Override
+    public boolean isUserInMemory(String ipAddress) {
+        for (User user : users) {
+            if(user.getIpAddress().equals(ipAddress))
+                return true;
+        }
+        return false;
     }
 }

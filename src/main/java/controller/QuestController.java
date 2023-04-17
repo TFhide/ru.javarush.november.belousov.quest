@@ -1,5 +1,6 @@
 package controller;
 
+import com.sun.org.slf4j.internal.LoggerFactory;
 import controller.dispatcher.MethodType;
 import controller.dispatcher.RequestMapping;
 import entity.Answer;
@@ -15,10 +16,12 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class QuestController {
          private final QuestService serviceQuest;
          private final UserService userService;
+         private final Logger Logger = LoggerFactory.getLogger(QuestController.class);
 
     public QuestController(QuestService questService, UserService userService) {
         this.serviceQuest = questService;
@@ -95,7 +98,19 @@ public class QuestController {
 //        System.out.println(request.getParameter("answer"));
 //        System.out.println("request.getParameter(question)= " + request.getParameter("question"));
 //        System.out.println("request.getParameter(answer)= " + Long.parseLong(request.getParameter("answer")));
+        HttpSession session = request.getSession();
+        String ipAddress = request.getRemoteAddr();
+        session.setAttribute("ipAddress", ipAddress); // сохраняем атрибут "ip" в сессии
 
+        String ip = (String) session.getAttribute("ipAddress"); // получаем атрибут "name" из сессии
+        if (ip != null) {
+            if(!userService.isUserInMemory(ip))
+            userService.addUser(ip);
+            Logger logger = new org.apache.logging.log4j.Logger()
+            response.getWriter().println("Hello, " + ip + "!");
+        } else {
+            response.getWriter().println("Name attribute is not found in session.");
+        }
         JSONObject json = new JSONObject();
         boolean checkResult = serviceQuest.checkResultOnTrueOrFalse(serviceQuest.getNextQuestion(1L,
                 request.getParameter("question"), Long.parseLong(request.getParameter("answer"))));

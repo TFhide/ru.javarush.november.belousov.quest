@@ -3,19 +3,19 @@ package entity;
 import java.util.Objects;
 
 public class User {
-    private final Integer ipAddress;
+    private final String ipAddress;
     private Integer win;
     private Integer lose;
     private Integer quantity;
 
-    public User(Integer ipAddress) {
+    public User(String ipAddress) {
         this.ipAddress = ipAddress;
         this.win = 0;
         this.lose = 0;
         this.quantity = 0;
     }
 
-    public Integer getIpAddress() {
+    public String getIpAddress() {
         return ipAddress;
     }
 
@@ -66,7 +66,7 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "id=" + ipAddress +
+                "ipAddress='" + ipAddress + '\'' +
                 ", win=" + win +
                 ", lose=" + lose +
                 ", quantity=" + quantity +
