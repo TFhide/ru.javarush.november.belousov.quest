@@ -4,12 +4,17 @@ import entity.User;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class InMemoryUserRepository implements UserRepository {
     private List<User> users;
 
     {
         users = new ArrayList<>();
+    }
+
+    public List<User> getUsers() {
+        return users;
     }
 
     @Override
@@ -57,12 +62,13 @@ public class InMemoryUserRepository implements UserRepository {
     }
 
     @Override
-    public User getUser(String ipAddress)
+    public Optional<User> getUser(String ipAddress)
     {
         for (User user : users) {
             if (user.getIpAddress().equals(ipAddress))
-                return user;
+                return Optional.ofNullable(user);
         }
-        return null;  // обработать
+        return Optional.empty();
     }
+
 }

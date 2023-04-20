@@ -94,14 +94,16 @@ public class InMemoryQuestRepository implements QuestRepository {
     }
 
     @Override
-    public Long getQuestionId(String questionText) {
-        for (Map.Entry<Long, Quest> entry : ID_TO_QUEST.entrySet()) {
-            for (Question question : entry.getValue().getQuestions()) {
-                if (question.getText().equals(questionText))
-                    return question.getId();
+    public Optional<Long> getQuestionId(String questionText) {
+        if (!(ID_TO_QUEST.isEmpty())) {
+            for (Map.Entry<Long, Quest> entry : ID_TO_QUEST.entrySet()) {
+                for (Question question : entry.getValue().getQuestions()) {
+                    if (question.getText().equals(questionText))
+                        return Optional.ofNullable(question.getId());
+                }
             }
         }
-        return null; // обработать
+        return Optional.empty();
     }
 
 }

@@ -40,12 +40,17 @@ public class UserService {
     public String getUserStatistic(String ipAddress)
     {
         JSONObject json = new JSONObject();
-        User user = userRepository.getUser(ipAddress);
+        User user = userRepository.getUser(ipAddress).get();
         json.put("ipAddress", user.getIpAddress());
         json.put("quantity", user.getQuantity());
         json.put("win", user.getWin());
         json.put("lose", user.getLose());
         return json.toString();
+    }
+
+    public boolean isValidIpAddress(String ipAddress)
+    {
+        return ipAddress != null ? true : false;
     }
 
 }

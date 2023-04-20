@@ -47,7 +47,7 @@ public class QuestService {
 
     public Long getQuestionId(String questionText)
     {
-        return repository.getQuestionId(questionText);
+        return repository.getQuestionId(questionText).get();
     }
 
     public Question getQuestion(Long idQuest, Long idQuestion)

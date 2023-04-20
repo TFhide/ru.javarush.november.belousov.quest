@@ -2,6 +2,7 @@ package entity;
 
 import java.util.Objects;
 
+
 public class User {
     private final String ipAddress;
     private Integer win;

@@ -2,6 +2,7 @@ package entity;
 
 import java.util.List;
 
+
 public class Question {
     private final Long id;
     private String text;

@@ -1,5 +1,6 @@
 package entity;
 
+
 public class Answer {
     private Long id;
     private String text;

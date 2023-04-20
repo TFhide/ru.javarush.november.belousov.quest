@@ -9,15 +9,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f775d09e-3c33-490c-9fd4-f4124b1718d2" name="Changes" comment="3.0 ver">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/statistic.jsp" afterDir="false" />
+    <list default="true" id="f775d09e-3c33-490c-9fd4-f4124b1718d2" name="Changes" comment="6.0 ver">
+      <change afterPath="$PROJECT_DIR$/src/test/java/repository/InMemoryQuestRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/repository/InMemoryUserRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/service/QuestServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/QuestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/QuestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/dispatcher/DispatcherServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/dispatcher/DispatcherServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/dispatcher/MethodMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/dispatcher/HandlerMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/dispatcher/RegisterForControllers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/dispatcher/RegisterForControllers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/dispatcher/HandlerMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/dispatcher/HandlerMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/dispatcher/RequestMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/dispatcher/RequestMapping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Answer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Answer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Quest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Quest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/entity/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/injector/ApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/injector/ApplicationContext.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/InMemoryQuestRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/InMemoryQuestRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/InMemoryUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/InMemoryUserRepository.java" afterDir="false" />
@@ -25,13 +31,6 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/QuestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/QuestService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/qqq.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/que.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/question.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/question.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/test.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ttt.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,14 +44,28 @@
         <option value="AnnotationType" />
         <option value="HTML File" />
         <option value="Class" />
-        <option value="Interface" />
         <option value="JavaScript File" />
         <option value="Jsp File" />
+        <option value="JUnit5 Test Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="4e43ea0e-f33f-4051-9e2a-5fb79bbfcdfa" />
+        <option name="url" value="https://github.com/TFhide/ru.javarush.november.belousov.quest.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/pom.xml" root0="FORCE_HIGHLIGHTING" />
@@ -92,12 +105,15 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/tffide/Documents/Github projects/FinalProject3Module/Project3Quest/src/main/webapp/img&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
@@ -115,17 +131,93 @@
       <recent name="$PROJECT_DIR$/src/main/webapp/img" />
       <recent name="$PROJECT_DIR$/bootstrap/js" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="repository" />
+      <recent name="service" />
+    </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.70">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+  <component name="RunManager" selected="JUnit.InMemoryUserRepositoryTest.saveOfLose">
+    <configuration name="InMemoryUserRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project3Quest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="repository" />
+      <option name="MAIN_CLASS_NAME" value="repository.InMemoryUserRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="index.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/index.jsp">
-      <method v="2" />
+    <configuration name="InMemoryUserRepositoryTest.saveActionUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Project3Quest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="repository" />
+      <option name="MAIN_CLASS_NAME" value="repository.InMemoryUserRepositoryTest" />
+      <option name="METHOD_NAME" value="saveActionUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InMemoryUserRepositoryTest.saveActionUser_return" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Project3Quest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="repository" />
+      <option name="MAIN_CLASS_NAME" value="repository.InMemoryUserRepositoryTest" />
+      <option name="METHOD_NAME" value="saveActionUser_return" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InMemoryUserRepositoryTest.saveOfLose" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Project3Quest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="repository" />
+      <option name="MAIN_CLASS_NAME" value="repository.InMemoryUserRepositoryTest" />
+      <option name="METHOD_NAME" value="saveOfLose" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InMemoryUserRepositoryTest.saveOfWin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Project3Quest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="repository" />
+      <option name="MAIN_CLASS_NAME" value="repository.InMemoryUserRepositoryTest" />
+      <option name="METHOD_NAME" value="saveOfWin" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="Tomcat 9.0.70" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.70" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="redeploy-artifacts" />
@@ -216,8 +308,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.index.jsp" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.InMemoryUserRepositoryTest.saveOfLose" />
+        <item itemvalue="JUnit.InMemoryUserRepositoryTest.saveOfWin" />
+        <item itemvalue="JUnit.InMemoryUserRepositoryTest" />
+        <item itemvalue="JUnit.InMemoryUserRepositoryTest.saveActionUser_return" />
+        <item itemvalue="JUnit.InMemoryUserRepositoryTest.saveActionUser" />
       </list>
     </recent_temporary>
   </component>
@@ -264,6 +359,11 @@
       <workItem from="1681383375144" duration="3114000" />
       <workItem from="1681452312421" duration="12728000" />
       <workItem from="1681483938185" duration="6362000" />
+      <workItem from="1681748784102" duration="1314000" />
+      <workItem from="1681800988799" duration="6127000" />
+      <workItem from="1681828794718" duration="6820000" />
+      <workItem from="1681899827158" duration="3172000" />
+      <workItem from="1681975923400" duration="11237000" />
     </task>
     <task id="LOCAL-00001" summary="2.0 ver">
       <created>1680083439729</created>
@@ -272,7 +372,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680083439729</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="6.0 ver">
+      <created>1681739913569</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1681739913569</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,6 +399,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2.0 ver" />
     <MESSAGE value="3.0 ver" />
-    <option name="LAST_COMMIT_MESSAGE" value="3.0 ver" />
+    <MESSAGE value="6.0 ver" />
+    <option name="LAST_COMMIT_MESSAGE" value="6.0 ver" />
   </component>
 </project>

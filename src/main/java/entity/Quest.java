@@ -3,6 +3,7 @@ package entity;
 import java.util.List;
 import java.util.Objects;
 
+
 public class Quest {
     private Long id;
     private String name;

@@ -43,7 +43,7 @@ public class QuestController {
         HttpSession session = request.getSession();
         session.setAttribute("ipAddress", request.getRemoteAddr());
         String ip = (String) session.getAttribute("ipAddress");
-        if (ip != null && !userService.isUserInMemory(ip)) {
+        if (userService.isValidIpAddress(ip) && !userService.isUserInMemory(ip)) {
             userService.addUser(ip);
             userService.saveActionUser(ip);
         }
@@ -61,7 +61,7 @@ public class QuestController {
     {
         HttpSession session = request.getSession();
         String ip = (String) session.getAttribute("ipAddress");
-        if (ip != null && !userService.isUserInMemory(ip)) {
+        if (userService.isValidIpAddress(ip) && !userService.isUserInMemory(ip)) {
             userService.addUser(ip);
         }
         response.setContentType("application/json");
@@ -91,7 +91,7 @@ public class QuestController {
         HttpSession session = request.getSession();
         session.setAttribute("ipAddress", request.getRemoteAddr());
         String ip = (String) request.getSession().getAttribute("ipAddress");
-        if (ip != null && !userService.isUserInMemory(ip)) {
+        if (userService.isValidIpAddress(ip) && !userService.isUserInMemory(ip)) {
             userService.addUser(ip);
             try {
                 response.getWriter().write(userService.getUserStatistic(ip));
