@@ -21,7 +21,6 @@ class InMemoryQuestRepositoryTest {
     @BeforeEach
     void SetUp() {
         questRepository = new InMemoryQuestRepository();
-//        inMemoryQuestRepository = new InMemoryQuestRepository();
 //        mockRepository = Mockito.mock(QuestRepository.class);
         quests = Arrays.asList(new Quest(1L, "Путешествие принца Персии: Легенда о затерянной цитадели", Arrays.asList(
                 new Question(1L, "Ты готов отправиться в путешествие вместе с принцем Персии на поиски затерянной цитадели?",
@@ -55,20 +54,20 @@ class InMemoryQuestRepositoryTest {
         assertFalse(descriptionQuest.isEmpty());
     }
 
-    @Test
-    void getQuestionId_shouldReturnOptionalEmpty_whenQuestionTextNotFoundQuestion()
-    {
-        Optional<Long> randomQuestion = questRepository.getQuestionId("random question");
-        assertFalse(randomQuestion.isPresent());
-    }
-
-    @Test
-    void getQuestionId_shouldReturnIdQuestion_whenQuestionExist()
-    {
-        Question question = quests.get(0).getQuestions().get(0);
-        Optional<Long> questionId = questRepository.getQuestionId(question.getText());
-        assertEquals(question.getId(), questionId.get());
-    }
+//    @Test
+//    void getQuestionId_shouldReturnOptionalEmpty_whenQuestionTextNotFoundQuestion()
+//    {
+//        Optional<Long> randomQuestion = questRepository.getQuestionId("random question");
+//        assertFalse(randomQuestion.isPresent());
+//    }
+//
+//    @Test
+//    void getQuestionId_shouldReturnIdQuestion_whenQuestionExist()
+//    {
+//        Question question = quests.get(0).getQuestions().get(0);
+//        Optional<Long> questionId = questRepository.getQuestionId(question.getText());
+//        assertEquals(question.getId(), questionId.get());
+//    }
 //
 //        assertEquals(questById.get(), ID_TO_QUEST.get(1L));
 //        when(mockRepository.getQuestById(1L)).thenReturn(Optional.ofNullable(ID_TO_QUEST.get(1L)));

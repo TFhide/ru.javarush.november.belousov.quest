@@ -9,28 +9,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f775d09e-3c33-490c-9fd4-f4124b1718d2" name="Changes" comment="6.0 ver">
-      <change afterPath="$PROJECT_DIR$/src/test/java/repository/InMemoryQuestRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/repository/InMemoryUserRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/service/QuestServiceTest.java" afterDir="false" />
+    <list default="true" id="f775d09e-3c33-490c-9fd4-f4124b1718d2" name="Changes" comment="7.0 ver">
+      <change afterPath="$PROJECT_DIR$/src/test/java/controller/dispatcher/RegisterForControllersTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/service/UserServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/QuestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/QuestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/dispatcher/DispatcherServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/dispatcher/DispatcherServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/dispatcher/HandlerMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/dispatcher/HandlerMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/dispatcher/RequestMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/dispatcher/RequestMapping.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Answer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Answer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Quest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Quest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/injector/ApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/injector/ApplicationContext.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/InMemoryQuestRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/InMemoryQuestRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/InMemoryUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/InMemoryUserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/QuestRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/QuestRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/QuestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/QuestService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/statistic.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/statistic.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/repository/InMemoryQuestRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/repository/InMemoryQuestRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/repository/InMemoryUserRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/repository/InMemoryUserRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/service/QuestServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/service/QuestServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,8 +40,8 @@
         <option value="Class" />
         <option value="JavaScript File" />
         <option value="Jsp File" />
-        <option value="JUnit5 Test Class" />
         <option value="Interface" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -135,85 +129,86 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="repository" />
+      <recent name="controller.dispatcher" />
       <recent name="service" />
+      <recent name="repository" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.InMemoryUserRepositoryTest.saveOfLose">
-    <configuration name="InMemoryUserRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.70">
+    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project3Quest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="repository.*" />
+          <option name="PATTERN" value="service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="repository" />
-      <option name="MAIN_CLASS_NAME" value="repository.InMemoryUserRepositoryTest" />
+      <option name="PACKAGE_NAME" value="service" />
+      <option name="MAIN_CLASS_NAME" value="service.UserServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InMemoryUserRepositoryTest.saveActionUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserServiceTest.getUserStatistic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project3Quest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="repository.*" />
+          <option name="PATTERN" value="service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="repository" />
-      <option name="MAIN_CLASS_NAME" value="repository.InMemoryUserRepositoryTest" />
-      <option name="METHOD_NAME" value="saveActionUser" />
+      <option name="PACKAGE_NAME" value="service" />
+      <option name="MAIN_CLASS_NAME" value="service.UserServiceTest" />
+      <option name="METHOD_NAME" value="getUserStatistic" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InMemoryUserRepositoryTest.saveActionUser_return" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserServiceTest.isUserInMemory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project3Quest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="repository.*" />
+          <option name="PATTERN" value="service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="repository" />
-      <option name="MAIN_CLASS_NAME" value="repository.InMemoryUserRepositoryTest" />
-      <option name="METHOD_NAME" value="saveActionUser_return" />
+      <option name="PACKAGE_NAME" value="service" />
+      <option name="MAIN_CLASS_NAME" value="service.UserServiceTest" />
+      <option name="METHOD_NAME" value="isUserInMemory" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InMemoryUserRepositoryTest.saveOfLose" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserServiceTest.isUserInMemory_shouldReturnFalse_whenUserDoesNotExist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project3Quest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="repository.*" />
+          <option name="PATTERN" value="service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="repository" />
-      <option name="MAIN_CLASS_NAME" value="repository.InMemoryUserRepositoryTest" />
-      <option name="METHOD_NAME" value="saveOfLose" />
+      <option name="PACKAGE_NAME" value="service" />
+      <option name="MAIN_CLASS_NAME" value="service.UserServiceTest" />
+      <option name="METHOD_NAME" value="isUserInMemory_shouldReturnFalse_whenUserDoesNotExist" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InMemoryUserRepositoryTest.saveOfWin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserServiceTest.isValidIpAddress_shouldReturnFalse_whenIpAddressIsInvalid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project3Quest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="repository.*" />
+          <option name="PATTERN" value="service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="repository" />
-      <option name="MAIN_CLASS_NAME" value="repository.InMemoryUserRepositoryTest" />
-      <option name="METHOD_NAME" value="saveOfWin" />
+      <option name="PACKAGE_NAME" value="service" />
+      <option name="MAIN_CLASS_NAME" value="service.UserServiceTest" />
+      <option name="METHOD_NAME" value="isValidIpAddress_shouldReturnFalse_whenIpAddressIsInvalid" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -308,11 +303,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.InMemoryUserRepositoryTest.saveOfLose" />
-        <item itemvalue="JUnit.InMemoryUserRepositoryTest.saveOfWin" />
-        <item itemvalue="JUnit.InMemoryUserRepositoryTest" />
-        <item itemvalue="JUnit.InMemoryUserRepositoryTest.saveActionUser_return" />
-        <item itemvalue="JUnit.InMemoryUserRepositoryTest.saveActionUser" />
+        <item itemvalue="JUnit.UserServiceTest" />
+        <item itemvalue="JUnit.UserServiceTest.isValidIpAddress_shouldReturnFalse_whenIpAddressIsInvalid" />
+        <item itemvalue="JUnit.UserServiceTest.getUserStatistic" />
+        <item itemvalue="JUnit.UserServiceTest.isUserInMemory_shouldReturnFalse_whenUserDoesNotExist" />
+        <item itemvalue="JUnit.UserServiceTest.isUserInMemory" />
       </list>
     </recent_temporary>
   </component>
@@ -363,7 +358,8 @@
       <workItem from="1681800988799" duration="6127000" />
       <workItem from="1681828794718" duration="6820000" />
       <workItem from="1681899827158" duration="3172000" />
-      <workItem from="1681975923400" duration="11237000" />
+      <workItem from="1681975923400" duration="11384000" />
+      <workItem from="1682057125670" duration="26296000" />
     </task>
     <task id="LOCAL-00001" summary="2.0 ver">
       <created>1680083439729</created>
@@ -379,7 +375,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681739913569</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="7.0 ver">
+      <created>1681997644267</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1681997644267</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -400,6 +403,7 @@
     <MESSAGE value="2.0 ver" />
     <MESSAGE value="3.0 ver" />
     <MESSAGE value="6.0 ver" />
-    <option name="LAST_COMMIT_MESSAGE" value="6.0 ver" />
+    <MESSAGE value="7.0 ver" />
+    <option name="LAST_COMMIT_MESSAGE" value="7.0 ver" />
   </component>
 </project>

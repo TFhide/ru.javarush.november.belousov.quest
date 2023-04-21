@@ -19,7 +19,8 @@ header, footer {
     /*filter: url("img/pattern.png"), progid:DXImageTransform.Microsoft.gradient(startColorstr=var(--color1),*/
     /*endColorstr=var(--color2), GradientType=1);*/
 }
-.section-link, .description-link {
+.section-link, .description-link, .statistic-link {
+    /*text-align: left;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,26 +29,20 @@ header, footer {
     border-radius: 5px;
     width: 200px;
     height: 50px;
-    text-decoration: none;
     margin: 0 auto;
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#c19e67+0,e9d4b3+100 */
-    background: #c19e67; /* Old browsers */
-    background: -moz-linear-gradient(to bottom,  #c19e67 0%, #e9d4b3 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(to bottom,  #c19e67 0%,#e9d4b3 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  #c19e67 0%,#e9d4b3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c19e67', endColorstr='#e9d4b3',GradientType=0 ); /* IE6-9 */
+    text-decoration: none;
+    background: #c19e67;
+    background: -moz-linear-gradient(to bottom,  #c19e67 0%, #e9d4b3 100%);
+    background: -webkit-linear-gradient(to bottom,  #c19e67 0%,#e9d4b3 100%);
+    background: linear-gradient(to bottom,  #c19e67 0%,#e9d4b3 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c19e67', endColorstr='#e9d4b3',GradientType=0 );
     color: var(--color1);
-    /*color: #fff;*/
 }
 
 .general-link {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-#question-container {
-
 }
 
 .quests-icon {
@@ -62,6 +57,36 @@ header, footer {
 }
 .quests-icon:hover {
     background-color: #c19e67;
+}
+
+.icon-left {
+    display: block;
+    float: left;
+    margin-left: 80px;
+    width: 300px;
+    height: 240px;
+    /*margin-right: 5px;*/
+}
+
+.icon-right {
+    display: block;
+    float: right;
+    margin-right: 80px;
+    width: 300px;
+    height: 240px;
+    /*margin-right: 5px;*/
+}
+
+td, th {
+    border: 3px solid var(--color1);
+}
+
+#quantity, #win, #lose {
+    width: 50px;
+}
+
+#quantityH, #winH, #loseH {
+    height: 50px;
 }
 
 /*    .itd_play {*/

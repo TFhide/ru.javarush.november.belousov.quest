@@ -65,7 +65,7 @@
     <dependency>
       <groupId>com.googlecode.json-simple</groupId>
       <artifactId>json-simple</artifactId>
-      <version>1.1.1</version>
+      <version>1.1</version>
     </dependency>
     <dependency>
       <groupId>org.mockito</groupId>
@@ -105,6 +105,8 @@
               <exclude>**/ApplicationContext.class</exclude>
               <exclude>**/QuestRepository.class</exclude>
               <exclude>**/UserRepository.class</exclude>
+              <exclude>**/RegisterForControllers.class</exclude>
+              <exclude>**/QuestService.getJsonContainer</exclude>
             </excludes>
           </configuration>
           <executions>

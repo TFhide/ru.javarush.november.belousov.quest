@@ -36,17 +36,17 @@
                     <h2 id="headStatistic"></h2>
                 </div>
             <div class="statistic">
-                <table class="table; center-text">
+                <table class="table; center-text" style="margin: 0 auto">
                     <tr>
-                        <th scope="row">Сделано попыток</th>
+                        <th id="quantityH" scope="row">Сделано попыток</th>
                         <td id="quantity"></td>
                     </tr>
                     <tr>
-                        <th scope="row">Количество побед</th>
+                        <th id="winH" scope="row">Количество побед</th>
                         <td id="win"></td>
                     </tr>
                     <tr>
-                        <th scope="row">Количество поражений</th>
+                        <th id="loseH" scope="row">Количество поражений</th>
                         <td id="lose"></td>
                     </tr>
                 </table>

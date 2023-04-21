@@ -13,7 +13,7 @@ public interface QuestRepository {
 
      Map<String, Map<String,String>> getDescriptionQuest();
 
-     Optional<Long> getQuestionId(String questionText);
+     Long getQuestionId(String questionText);
 
 
 }

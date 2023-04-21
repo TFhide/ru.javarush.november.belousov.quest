@@ -5,7 +5,8 @@ import org.json.simple.JSONObject;
 import repository.UserRepository;
 
 public class UserService {
-    UserRepository userRepository;
+    private final UserRepository userRepository;
+
 
     public UserService(UserRepository userRepository)
     {
@@ -53,4 +54,7 @@ public class UserService {
         return ipAddress != null ? true : false;
     }
 
+    public UserRepository getUserRepository() {
+        return userRepository;
+    }
 }

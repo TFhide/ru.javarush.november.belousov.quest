@@ -31,7 +31,7 @@ public class QuestController {
             response.setContentType("application/json");
             response.setCharacterEncoding("UTF-8");
             try {
-               response.getWriter().write(serviceQuest.getDescriptionQuest());
+               response.getWriter().write(serviceQuest.getDescriptionQuest().get());
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

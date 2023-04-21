@@ -3,80 +3,123 @@ package service;
 import entity.Answer;
 import entity.Quest;
 import entity.Question;
+import org.json.simple.JSONObject;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import repository.InMemoryQuestRepository;
+import repository.QuestRepository;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Map;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class QuestServiceTest {
-
-//    private QuestService questService;
-//
-//    @BeforeEach
-//    void setUp() {
-//        // создание тестовых данных
-//        List<Quest> quests = new ArrayList<>();
-//        quests.add(new Quest(1L, "Путешествие принца Персии: Легенда о затерянной цитадели", Arrays.asList(
-//                new Question(1L, "Ты готов отправиться в путешествие вместе с принцем Персии на поиски затерянной цитадели?",
-//                        "img/PrinceOfPersia/first_scene.png", Arrays.asList(new Answer(1L, "Да, я готов(а) к приключению!", 2L),
-//                        new Answer(2L, "Нет, я боюсь рисковать своей жизнью.",
-//                                "Ты подвел принца Персии, он расчитывал на твою помощь. Поражение!"))))));
-//
-//    }
-//    @Test
-//    void getDescriptionQuest() {
-//
-//    }
-//
-//    @Test
-//    void getFirstQuestion() {
-//    }
-//
-//    @Test
-//    void getQuestionId() {
-//    }
-//
-//    @Test
-//    void getQuestion() {
-//    }
-//
-//    @Test
-//    void getNextQuestion() {
-//    }
-//
-//    @Test
-//    void checkResultOnTrueOrFalse() {
-//    }
-//
-//    @Test
-//    void getJsonContainer() {
-//    }
-//
-//    @Test
-//    void getQuestByID() {
-//        List<Quest> quests = new ArrayList<>();
-//        quests.add(new Quest(1L, "Путешествие принца Персии: Легенда о затерянной цитадели", Arrays.asList(
-//                new Question(1L, "Ты готов отправиться в путешествие вместе с принцем Персии на поиски затерянной цитадели?",
-//                        "img/PrinceOfPersia/first_scene.png", Arrays.asList(new Answer(1L, "Да, я готов(а) к приключению!", 2L),
-//                        new Answer(2L, "Нет, я боюсь рисковать своей жизнью.",
-//                                "Ты подвел принца Персии, он расчитывал на твою помощь. Поражение!"))))));
-//        // создаем заглушку для ID_TO_QUEST
-//        Map<Long, Quest> ID_TO_QUEST = new HashMap<>();
-//        ID_TO_QUEST.put(1L, quests.get(0));
-//
-//        // создаем экземпляр класса, который будем тестировать
-//        QuestService questService = new QuestService(quests, ID_TO_QUEST);
-//
-//        // создаем заглушку для Long id
-//        Long id = 1L;
-//
-//        // вызываем метод getQuestById
-//        Optional<Quest> result = questService.getQuestById(id);
-//
-//        // проверяем, что результат не пустой и соответствует ожидаемому
-//        assertTrue(result.isPresent());
-//        assertEquals(quests.get(0), result.get());
-//    }
+    QuestService questService;
+    @BeforeEach
+    void setUp()
+    {
+        questService = new QuestService(new InMemoryQuestRepository());
     }
+
+    @Test
+    void getDescriptionQuest_shouldReturnTrue_whenDescriptionAndImageExit()
+    {
+        String descriptionQuest = questService.getDescriptionQuest().get();
+        assertTrue(descriptionQuest.contains("description"));
+        assertTrue(descriptionQuest.contains("image"));
+    }
+
+    @Test
+    void getDescriptionQuest_shouldReturnTrue_whenDescriptionAndImageAreNotExit()
+    {
+        Optional<String> descriptionQuest = questService.getDescriptionQuest();
+        assertFalse(descriptionQuest.isEmpty());
+    }
+
+    @Test
+    void getFirstQuestion_shouldReturnFalse_whenJSONFirstQuestionDoesNotContainsKeys()
+    {
+        JSONObject firstQuestion = questService.getFirstQuestion();
+        assertTrue(firstQuestion.containsKey("question"));
+        assertTrue(firstQuestion.containsKey("answer1"));
+        assertTrue(firstQuestion.containsKey("answer2"));
+        assertTrue(firstQuestion.containsKey("image"));
+    }
+
+    @Test
+    void getFirstQuestion_shouldReturnFalse_whenJSONFirstQuestionIsEmpty()
+    {
+        JSONObject firstQuestion = questService.getFirstQuestion();
+        assertFalse(firstQuestion.isEmpty());
+    }
+
+    @Test
+    void getQuestionId_shouldReturnQuestion_whenQuestionExist()
+    {
+        Long number = 1L;
+        Long questionId = questService.getQuestionId(
+                "Ты готов отправиться в путешествие вместе с принцем Персии на поиски затерянной цитадели?");
+        assertEquals(number, questionId);
+    }
+
+    @Test
+    void getQuestionId_shouldReturnNull_whenQuestionNotExist()
+    {
+        assertNull(questService.getQuestionId(""));
+        assertNull(questService.getQuestionId("Когда будет исследовать заброшенный замок?"));
+    }
+
+    @Test
+    void getQuestion_shouldReturnNull_whenQuestDoesNotExist()
+    {
+        assertNull(questService.getQuestion(2L, 3L));
+        assertNull(questService.getQuestion(1L, 10L));
+    }
+
+    @Test
+    void getNextQuestion_shouldReturnNull_whenNextQuestionDoesNotExist()
+    {
+        Object nextQuestion = questService.getNextQuestion(1L, "Когда будет исследовать заброшенный замок?", 2L);
+        assertEquals(null, nextQuestion);
+    }
+
+    @Test
+    void getNextQuestion_shouldReturnNextQuestion_whenQuestionExist()
+    {
+        Question nextQuestion = (Question) questService.getNextQuestion(
+                1L, "Ты и принц Персии оказались в засаде. Как поступишь?", 1L);
+        assertEquals(questService.getQuestion(1L, 3L), nextQuestion);
+    }
+
+    @Test
+    void checkResultOnTrueOrFalse_shouldReturnTrue_whenQuestionIsQuestionOfClass()
+    {
+        boolean result = questService.checkResultOnTrueOrFalse(questService.getNextQuestion(
+                1L, "Ты и принц Персии оказались в засаде. Как поступишь?", 1L));
+        assertTrue(result);
+    }
+
+//    @Test
+//    void getJsonContainer()
+//    {
+//        questService.getJsonContainer()
+//
+//    }
+
+    @Test
+    void getQuestByID_shouldReturnQuest_whenQuestExist()
+    {
+        Quest questByID = questService.getQuestByID(1L);
+        assertTrue(Optional.of(questByID).isPresent());
+    }
+
+    @Test
+    void getQuestByID_shouldReturnNull_whenQuestDoesNotExist()
+    {
+        Quest questByID = questService.getQuestByID(10L);
+        assertNull(questByID);
+    }
+}
