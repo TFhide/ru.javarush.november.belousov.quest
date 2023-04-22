@@ -18,14 +18,12 @@ public class InMemoryUserRepository implements UserRepository {
     }
 
     @Override
-    public void addUser(String ipAddress)
-    {
-           users.add(new User(ipAddress));
+    public void addUser(String ipAddress) {
+        users.add(new User(ipAddress));
     }
 
     @Override
-    public void saveActionUser(String ipAddress)
-    {
+    public void saveActionUser(String ipAddress) {
         for (User user : users) {
             if (user.getIpAddress().equals(ipAddress))
                 user.setQuantity(user.getQuantity() + 1);
@@ -33,8 +31,7 @@ public class InMemoryUserRepository implements UserRepository {
     }
 
     @Override
-    public void saveOfWin(String ipAddress)
-    {
+    public void saveOfWin(String ipAddress) {
         for (User user : users) {
             if (user.getIpAddress().equals(ipAddress))
                 user.setWin(user.getWin() + 1);
@@ -42,8 +39,7 @@ public class InMemoryUserRepository implements UserRepository {
     }
 
     @Override
-    public void saveOfLose(String ipAddress)
-    {
+    public void saveOfLose(String ipAddress) {
         for (User user : users) {
             if (user.getIpAddress().equals(ipAddress))
                 user.setLose(user.getLose() + 1);
@@ -55,20 +51,18 @@ public class InMemoryUserRepository implements UserRepository {
         if (!users.isEmpty()) {
             for (User user : users) {
                 if (user.getIpAddress().equals(ipAddress))
-                return true;
+                    return true;
             }
         }
         return false;
     }
 
     @Override
-    public Optional<User> getUser(String ipAddress)
-    {
+    public Optional<User> getUser(String ipAddress) {
         for (User user : users) {
             if (user.getIpAddress().equals(ipAddress))
                 return Optional.ofNullable(user);
         }
         return Optional.empty();
     }
-
 }

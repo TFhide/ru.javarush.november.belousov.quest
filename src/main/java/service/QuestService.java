@@ -15,15 +15,13 @@ import java.util.Optional;
 public class QuestService {
     private final QuestRepository repository;
 
-    public QuestService(QuestRepository repository)
-    {
+    public QuestService(QuestRepository repository) {
         this.repository = repository;
     }
 
-    public Optional<String> getDescriptionQuest()
-    {
+    public Optional<String> getDescriptionQuest() {
         JSONObject json = new JSONObject();
-        if(!repository.getDescriptionQuest().isEmpty()) {
+        if (!repository.getDescriptionQuest().isEmpty()) {
             for (Map.Entry<String, Map<String, String>> entries : repository.getDescriptionQuest().entrySet()) {
                 for (Map.Entry<String, String> description : entries.getValue().entrySet()) {
                     json.put("description", description.getValue());
@@ -34,8 +32,7 @@ public class QuestService {
         return Optional.ofNullable(json.toString());
     }
 
-    public JSONObject getFirstQuestion()
-    {
+    public JSONObject getFirstQuestion() {
         JSONObject json = new JSONObject();
         Question question = getQuestion(1L, 1L);
         List<Answer> answers = question.getAnswers();
@@ -47,16 +44,14 @@ public class QuestService {
         return json;
     }
 
-    public Long getQuestionId(String questionText)
-    {
+    public Long getQuestionId(String questionText) {
         if (repository.getQuestionId(questionText) != null) {
             return repository.getQuestionId(questionText);
         }
         return null;
     }
 
-    public Question getQuestion(Long idQuest, Long idQuestion)
-    {
+    public Question getQuestion(Long idQuest, Long idQuestion) {
         if (getQuestByID(idQuest) != null) {
             for (Question question : getQuestByID(idQuest).getQuestions()) {
                 if (question.getId() == idQuestion) {
@@ -67,8 +62,7 @@ public class QuestService {
         return null;
     }
 
-    public Object getNextQuestion(Long questId, String questionText, Long answerId)
-    {
+    public Object getNextQuestion(Long questId, String questionText, Long answerId) {
         if (getQuestion(questId, getQuestionId(questionText)) != null) {
             List<Answer> answers = getQuestion(questId, getQuestionId(questionText)).getAnswers();
             for (int i = 0; i < answers.size(); i++) {
@@ -86,16 +80,14 @@ public class QuestService {
         return null;
     }
 
-    public boolean checkResultOnTrueOrFalse(Object value)
-    {
-         if (value instanceof Question) {
-             return true;
-         }
-         return false;
+    public boolean checkResultOnTrueOrFalse(Object value) {
+        if (value instanceof Question) {
+            return true;
+        }
+        return false;
     }
 
-    public JSONObject getJsonContainer(HttpServletRequest request)
-    {
+    public JSONObject getJsonContainer(HttpServletRequest request) {
         JSONObject json = new JSONObject();
         boolean checkResult = checkResultOnTrueOrFalse(getNextQuestion(1L,
                 request.getParameter("question"), Long.parseLong(request.getParameter("answer"))));
@@ -107,8 +99,7 @@ public class QuestService {
             json.put("answer2", question.getAnswers().get(1).getText());
             json.put("image", question.getQuestionImageLink());
             return json;
-        }
-        else {
+        } else {
             if (getNextQuestion(1L,
                     request.getParameter("question"), Long.parseLong(request.getParameter("answer"))) != null) {
                 String outcome = (String) getNextQuestion(1L,
@@ -118,10 +109,10 @@ public class QuestService {
         }
         return json;
     }
-        public Quest getQuestByID(Long id)
-    {
+
+    public Quest getQuestByID(Long id) {
         if (repository.getQuestById(id).isPresent()) {
-        Optional<Quest> quest = repository.getQuestById(id);
+            Optional<Quest> quest = repository.getQuestById(id);
             return quest.get();
         }
         return null;

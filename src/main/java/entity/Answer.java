@@ -1,9 +1,11 @@
 package entity;
 
 
+import java.util.Objects;
+
 public class Answer {
-    private Long id;
-    private String text;
+    private final Long id;
+    private final String text;
     private String outcome;
     private Long nextQuestionId;
 
@@ -33,6 +35,22 @@ public class Answer {
 
     public String getOutcome() {
         return outcome;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Answer answer = (Answer) o;
+        return Objects.equals(id, answer.id)
+                && Objects.equals(text, answer.text)
+                && Objects.equals(outcome, answer.outcome)
+                && Objects.equals(nextQuestionId, answer.nextQuestionId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, text, outcome, nextQuestionId);
     }
 
     @Override

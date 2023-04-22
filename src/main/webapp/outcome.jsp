@@ -18,7 +18,7 @@
     </div>
     <div class="row">
         <div class="center-text">
-            <p><a href="/" class="answer-link" style="margin-top: 20px; font-size: medium">Стартовая страница</a></p>
+            <p><a href="/" class="answer-link2" style="margin-top: 30px; font-size: large">Главная страница</a></p>
         </div>
     </div>
 </div>

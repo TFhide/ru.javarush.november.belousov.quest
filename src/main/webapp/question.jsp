@@ -16,7 +16,6 @@
 </head>
 <body>
 
-
 <div class="about" style="padding: 60px">
 <div id="question-container">
 <div class="row">

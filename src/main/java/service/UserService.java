@@ -8,38 +8,31 @@ public class UserService {
     private final UserRepository userRepository;
 
 
-    public UserService(UserRepository userRepository)
-    {
+    public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
-    public void addUser(String ipAddress)
-    {
+    public void addUser(String ipAddress) {
         userRepository.addUser(ipAddress);
     }
 
-    public void saveActionUser(String ipAddress)
-    {
+    public void saveActionUser(String ipAddress) {
         userRepository.saveActionUser(ipAddress);
     }
 
-    public void saveOfWin(String ipAddress)
-    {
+    public void saveOfWin(String ipAddress) {
         userRepository.saveOfWin(ipAddress);
     }
 
-    public void saveOfLose(String ipAddress)
-    {
+    public void saveOfLose(String ipAddress) {
         userRepository.saveOfLose(ipAddress);
     }
 
-    public boolean isUserInMemory(String ipAddress)
-    {
+    public boolean isUserInMemory(String ipAddress) {
         return userRepository.isUserInMemory(ipAddress);
     }
 
-    public String getUserStatistic(String ipAddress)
-    {
+    public String getUserStatistic(String ipAddress) {
         JSONObject json = new JSONObject();
         User user = userRepository.getUser(ipAddress).get();
         json.put("ipAddress", user.getIpAddress());
@@ -49,8 +42,7 @@ public class UserService {
         return json.toString();
     }
 
-    public boolean isValidIpAddress(String ipAddress)
-    {
+    public boolean isValidIpAddress(String ipAddress) {
         return ipAddress != null ? true : false;
     }
 

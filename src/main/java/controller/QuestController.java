@@ -1,24 +1,19 @@
 package controller;
 
-
-//import com.sun.org.slf4j.internal.Logger;
-//import com.sun.org.slf4j.internal.LoggerFactory;
 import controller.dispatcher.MethodType;
 import controller.dispatcher.RequestMapping;
-import org.json.simple.JSONObject;
 import service.QuestService;
 import service.UserService;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-
 public class QuestController {
-         private final QuestService serviceQuest;
-         private final UserService userService;
+    private final QuestService serviceQuest;
+    private final UserService userService;
 
-//         private final Logger LOGGER = LoggerFactory.getLogger(QuestController.class);
 
     public QuestController(QuestService questService, UserService userService) {
         this.serviceQuest = questService;
@@ -26,20 +21,18 @@ public class QuestController {
     }
 
     @RequestMapping(url = "/description", method = MethodType.GET)
-    public void getDescriptionQuest(HttpServletRequest request, HttpServletResponse response)
-    {
-            response.setContentType("application/json");
-            response.setCharacterEncoding("UTF-8");
-            try {
-               response.getWriter().write(serviceQuest.getDescriptionQuest().get());
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
+    public void getDescriptionQuest(HttpServletRequest request, HttpServletResponse response) {
+        response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
+        try {
+            response.getWriter().write(serviceQuest.getDescriptionQuest().get());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @RequestMapping(url = "/view", method = MethodType.GET)
-    public void showQuestion(HttpServletRequest request, HttpServletResponse response)
-    {
+    public void showQuestion(HttpServletRequest request, HttpServletResponse response) {
         HttpSession session = request.getSession();
         session.setAttribute("ipAddress", request.getRemoteAddr());
         String ip = (String) session.getAttribute("ipAddress");
@@ -57,8 +50,7 @@ public class QuestController {
     }
 
     @RequestMapping(url = "/handler", method = MethodType.POST)
-    public void showOutcome(HttpServletRequest request, HttpServletResponse response)
-    {
+    public void showOutcome(HttpServletRequest request, HttpServletResponse response) {
         HttpSession session = request.getSession();
         String ip = (String) session.getAttribute("ipAddress");
         if (userService.isValidIpAddress(ip) && !userService.isUserInMemory(ip)) {
@@ -84,8 +76,7 @@ public class QuestController {
     }
 
     @RequestMapping(url = "/statistic", method = MethodType.GET)
-    public void getUserStatistic(HttpServletRequest request, HttpServletResponse response)
-    {
+    public void getUserStatistic(HttpServletRequest request, HttpServletResponse response) {
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
         HttpSession session = request.getSession();

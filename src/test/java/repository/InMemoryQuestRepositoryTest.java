@@ -5,12 +5,12 @@ import entity.Quest;
 import entity.Question;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
+//import org.mockito.Mockito;
 
 import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.when;
+//import static org.mockito.Mockito.when;
 
 class InMemoryQuestRepositoryTest {
 

@@ -20,17 +20,8 @@
 </head>
 <body>
 
-
-<section class="text-center">
     <div class="about">
-        <div class="container">
-            <h2 id="statisticNull"></h2>
-            <%--            <div class="row">--%>
-            <%--                <div class="col-md-12"></div>--%>
-            <%--                <div class="center-text">--%>
-            <%--                </div>--%>
-            <%--            </div>--%>
-                </td>
+            <h2 id="statisticNull" style="margin: 0" ></h2>
                 <div class="center-text">
                     <h2>Ваш ip-адрес:</h2>
                     <h2 id="headStatistic"></h2>
@@ -51,13 +42,10 @@
                     </tr>
                 </table>
                 </div>
-            </div>
             <div class="row">
                 <a href="/" class="start-link">Главная страница</a>
             </div>
         </div>
-    </div>
-</section>
 
 <footer
         id="footer" style="padding: 30px">

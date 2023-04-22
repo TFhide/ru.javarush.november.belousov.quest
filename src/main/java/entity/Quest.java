@@ -8,7 +8,6 @@ public class Quest {
     private Long id;
     private String name;
     private List<Question> questions;
-
     private Long startQuestionId;
 
     public Quest(Long id, String name, List<Question> questions) {
@@ -44,8 +43,12 @@ public class Quest {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) { return true; }
-        if (o == null || getClass() != o.getClass()) { return false; }
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         Quest quest = (Quest) o;
         return Objects.equals(id, quest.id)
                 && Objects.equals(name, quest.name)

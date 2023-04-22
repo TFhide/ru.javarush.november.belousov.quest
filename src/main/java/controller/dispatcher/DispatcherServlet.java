@@ -1,6 +1,7 @@
 package controller.dispatcher;
 
 import injector.ApplicationContext;
+
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -22,7 +23,8 @@ public class DispatcherServlet extends HttpServlet {
             Constructor<ApplicationContext> constructor = clazz.getDeclaredConstructor();
             constructor.setAccessible(true);
             ApplicationContext applicationContext = constructor.newInstance();
-        } catch (NoSuchMethodException | InvocationTargetException | InstantiationException | IllegalAccessException e) {
+        } catch (NoSuchMethodException | InvocationTargetException | InstantiationException |
+                 IllegalAccessException e) {
             throw new RuntimeException(e);
         }
     }

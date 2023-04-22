@@ -29,7 +29,8 @@
         <div class="row">
             <div class="col-12"></div>
             <div class="center-text">
-                <h1 style="color: var(--color1); margin-top: 50px; padding-left: 120px">Путешествие принца Персии: Легенда о затерянной цитадели</h1>
+                <h1 style="color: var(--color1); margin-top: 50px; padding-left: 120px; font-size: xxx-large">
+                    <span style="color: #D4AF37">Путешествие принца </span>Персии: Легенда о затерянной цитадели</h1>
             </div>
         </div>
     </div>
@@ -38,8 +39,8 @@
 <section>
     <div class="about">
     <div id="content">
-        <img src="img/PrinceOfPersia/final_scene.png" alt="Image Left" class="icon-left">
-        <img src="img/PrinceOfPersia/final_scene.png" alt="Image Right" class="icon-right">
+        <img src="img/PrinceOfPersia/first_scene.png" alt="Image Left" class="icon-left">
+        <img src="img/PrinceOfPersia/first_scene.png" alt="Image Right" class="icon-right">
         <div class="center-text">
             <div class="row">
                 <p><a href="#" class="description-link" style="margin-top: 20px;">
@@ -60,5 +61,6 @@
         id="footer" style="padding: 50px">
 </footer>
 
+</script>
 </body>
 </html>
