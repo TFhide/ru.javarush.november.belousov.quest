@@ -39,8 +39,8 @@
 <section>
     <div class="about">
     <div id="content">
-        <img src="img/PrinceOfPersia/first_scene.png" alt="Image Left" class="icon-left">
-        <img src="img/PrinceOfPersia/first_scene.png" alt="Image Right" class="icon-right">
+        <img src="image/start_page.png" alt="Image Left" class="icon-left">
+        <img src="image/start_page.png" alt="Image Right" class="icon-right">
         <div class="center-text">
             <div class="row">
                 <p><a href="#" class="description-link" style="margin-top: 20px;">

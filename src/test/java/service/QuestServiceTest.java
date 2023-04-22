@@ -1,17 +1,12 @@
 package service;
 
-import entity.Answer;
 import entity.Quest;
 import entity.Question;
 import org.json.simple.JSONObject;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import repository.InMemoryQuestRepository;
-import repository.QuestRepository;
 
-import java.util.Arrays;
-import java.util.Map;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
